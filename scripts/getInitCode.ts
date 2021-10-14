@@ -15,11 +15,12 @@ async function main() {
 
   // We get the contract to deploy
   const PancakeFactory = await ethers.getContractFactory("PancakeFactory");
-  const factory = await PancakeFactory.attach("0x1CeE94a11eAf390B67Aa346E9Dda3019DfaD4f6A");
+  const factory = await PancakeFactory.attach("0xcd8620889c1dA22ED228e6C00182177f9dAd16b7");
 
   await factory.deployed();
 
-  //0x0558677b74f6dc11ee476ed79ce993579e32b1ae87e818f42c4f9d829c1db12a
+  //Shibuya: 0x0558677b74f6dc11ee476ed79ce993579e32b1ae87e818f42c4f9d829c1db12a
+  //Shiden: 0x0558677b74f6dc11ee476ed79ce993579e32b1ae87e818f42c4f9d829c1db12a
   console.log("factory code pair hash:", await factory.INIT_CODE_PAIR_HASH());
 }
 
